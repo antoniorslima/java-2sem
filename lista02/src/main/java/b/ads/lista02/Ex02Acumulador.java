@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author aluno
  */
-public class AcumuladorEx2 {
+public class Ex02Acumulador {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         System.out.println("Comece a acumular: ");

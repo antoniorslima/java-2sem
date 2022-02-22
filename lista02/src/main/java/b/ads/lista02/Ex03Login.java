@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author aluno
  */
-public class Exercicio3 {
+public class Ex03Login {
     public static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
         System.out.println("Digite o usuário: ");

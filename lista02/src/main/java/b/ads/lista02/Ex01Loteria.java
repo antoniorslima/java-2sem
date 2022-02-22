@@ -12,7 +12,7 @@ import java.util.concurrent.ThreadLocalRandom;
  *
  * @author aluno
  */
-public class LoteriaEx1 {
+public class Ex01Loteria {
     public static void main(String[] args) {
  
     Scanner leitor = new Scanner(System.in);
