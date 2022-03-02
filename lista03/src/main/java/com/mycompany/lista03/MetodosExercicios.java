@@ -44,4 +44,43 @@ public class MetodosExercicios {
             System.out.println("Você é um idoso");
         }
     }
-}
+    Double calcularDesconto(Double valor, Integer qtd){
+        Double valorFinal;
+        if (qtd == 1) {
+            return valorFinal = qtd * (valor * 0.90);
+        } else if (qtd == 2) {
+            return valorFinal = qtd * (valor * 0.80);
+        } else {
+            return valorFinal = qtd * (valor * 0.70);
+        }
+    }
+    void exibirNotaFiscal(Double valor, Integer qtd, Double valorFinal){
+        System.out.println("-".repeat(15));
+        System.out.println(String.format("Valor do produto: R$%.2f", valor));
+        System.out.println(String.format("Quantidade: %d", qtd));
+        System.out.println("-".repeat(15));
+        System.out.println(String.format("Valor com desconto: R$%.2f", valorFinal));
+    }
+    void calculaPesoIdeal(String genero, Double altura){
+        Double pesoIdeal;
+        if(genero.equals("M")) {
+            pesoIdeal = (72.7 * altura) - 58;
+        } else{
+            pesoIdeal = (62.1 * altura) - 44.7;
+        }
+        System.out.println(String.format("Seu peso ideal é: %.2f", pesoIdeal));
+    }
+    void verificarPrimo(Integer numero){
+        Integer divisores = 0;
+         for (int i = 1; i <= numero; i++) {
+             if (numero % i == 0) {
+                 divisores ++;
+             }
+        }
+         if (divisores == 2) {
+             System.out.println("O número %d É PRIMO");
+        } else {
+             System.out.println("O número %d NÃO É PRIMO");
+         }
+    }
+    }
