@@ -61,17 +61,9 @@ public class DesempenhoAluno {
                 case 4:
                     Integer escolha = 0;
                     System.out.println("\n\nPEDRA, PAPEL, TESOURA\n\n Bem vindo ao Jogo! Vamos começar?\n\n");
-                    while (escolha != 5){
-                    System.out.println("\n\nVerifique as opções\n"
-                                        + "1- pedra\n"
-                                        + "2- papel\n"
-                                        + "3- tesoura\n"
-                                        + "4- ver pontuação\n"
-                                        + "5- sair do jogo\n"
-                                        + "Sua escolha:");
-                        escolha = leitor.nextInt();
-                        metodo.jogo(escolha);
-                    }
+                    
+                    metodo.jogo();
+
                     break;
                 case 5:
                     System.out.println("-|-|".repeat(15));

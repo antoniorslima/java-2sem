@@ -4,6 +4,7 @@
  */
 package com.mycompany.projetoindividual;
 
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -11,6 +12,7 @@ import java.util.concurrent.ThreadLocalRandom;
  * @author anton
  */
 public class metodos {
+    Scanner leitor = new Scanner(System.in);
     void calculo(Double horasFacul, Double horasExtras) {
         Double mediaFacul = horasFacul * 20;
         Double mediaExtras = horasExtras * 4;
@@ -63,10 +65,24 @@ public class metodos {
         }
         System.out.println("-|-|".repeat(15));
     }
-    void jogo(Integer escolha){
+    void jogo(){
+        Integer escolha = 0;
         Integer vitorias = 0;
         Integer derrotas = 0;
         Integer empates = 0;
+        
+  
+        while (escolha != 5){
+        System.out.println("\n\nVerifique as opções\n"
+            + "1- pedra\n"
+            + "2- papel\n"
+            + "3- tesoura\n"
+            + "4- ver pontuação\n"
+            + "5- sair do jogo\n"
+            + "Sua escolha:");
+        escolha = leitor.nextInt();          
+                   
+   
         String jogador = "";
         switch (escolha) {
                 case 1:
@@ -111,7 +127,7 @@ public class metodos {
         }
          System.out.println(String.format("Seu adversário escolheu %s\n\n", computador)); 
          if (jogador.equals(computador)) {
-             empates ++;
+             empates++;
              System.out.println("-|-|".repeat(15));
              System.out.println("Resultado do jogo: empate, tente novamente!");
              System.out.println("-|-|".repeat(15));
@@ -119,17 +135,20 @@ public class metodos {
              if ((jogador.equals("PAPEL") && computador.equals("PEDRA")) || 
                      (jogador.equals("PEDRA") && computador.equals("TESOURA")) || 
                      (jogador.equals("TESOURA") && computador.equals("PAPEL"))){
-                 vitorias ++;
+                 vitorias++;
                  System.out.println("-|-|".repeat(15));
                  System.out.println("Você venceu!Parabéns!");
                  System.out.println("-|-|".repeat(15));
              } else{
-                 derrotas ++;
+                 derrotas++;
                  System.out.println("-|-|".repeat(15));
                  System.out.println("O computador venceu... tente novamente");
                  System.out.println("-|-|".repeat(15)); 
                 }
+         }
             }   
         }
+        
+  
     }
 }
