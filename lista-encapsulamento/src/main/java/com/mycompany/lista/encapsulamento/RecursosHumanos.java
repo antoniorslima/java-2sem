@@ -30,7 +30,7 @@ public class RecursosHumanos {
         colab.setSalario(novoSalario);
         totalPromovidos++;
         } else {
-            System.out.println("Não promova pagando menos!");
+            System.out.println("\n\nNão promova pagando menos!\n\n");
         }
     }
     
