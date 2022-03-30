@@ -15,16 +15,17 @@ public class Pet {
     private Integer qtdVisitas;
     private Double valorGasto;
 
-    public Pet(String nome, String raca, Integer qtdVisitas, Double valorGasto) {
+    public Pet(String nome, String raca) {
         this.nome = nome;
         this.raca = raca;
         this.qtdVisitas = qtdVisitas;
         this.valorGasto = valorGasto;
     }
 
+    
     @Override
     public String toString() {
-        return String.format("Nome: %s\nRaça: %s\nVisitas: %d\nValor gasto: %.2f",
+        return String.format("\n\nNome: %s\nRaça: %s\nVisitas: %d\nValor gasto: %.2f",
                 nome, raca, qtdVisitas, valorGasto);
     }
 

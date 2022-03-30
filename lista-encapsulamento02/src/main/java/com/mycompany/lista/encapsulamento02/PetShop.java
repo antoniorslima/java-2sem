@@ -11,9 +11,9 @@ package com.mycompany.lista.encapsulamento02;
 public class PetShop {
 
     private String nome;
-    private Double faturamento;
+    private Double faturamento = 0.0;
 
-    public PetShop(String nome, Double faturamento) {
+    public PetShop(String nome) {
         this.nome = nome;
         this.faturamento = faturamento;
     }
@@ -33,10 +33,18 @@ public class PetShop {
     public void setFaturamento(Double faturamento) {
         this.faturamento = faturamento;
     }
-    
-    public void darBanho(Pet pet, Double valor){
+
+    public void darBanho(Pet pet, Double valor) {
+        faturamento += valor;
+    }
+
+    public void darBanho(Pet pet, Double valor, Double desconto) {
+        faturamento += valor + ((valor * desconto) / 100);
+    }
+
+    @Override
+    public String toString() {
+        return "\n\nPetShop " + nome + "\nfaturamento=" + faturamento;
     }
     
-    public void darBanho(Pet pet, Double valor, Double desconto){
-    }
 }

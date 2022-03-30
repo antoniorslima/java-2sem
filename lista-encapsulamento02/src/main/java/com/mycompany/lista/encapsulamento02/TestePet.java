@@ -10,6 +10,12 @@ package com.mycompany.lista.encapsulamento02;
  */
 public class TestePet {
     public static void main(String[] args) {
-//        Pet pet1 = new Pet();
+        Pet pet1 = new Pet("Nupinho", "Labrador");
+        PetShop petshop1 = new PetShop("Petchope");
+        
+        petshop1.darBanho(pet1, 60.0);
+        petshop1.darBanho(pet1, 85.0, 20.0);
+        System.out.println(pet1);
+        System.out.println(petshop1);
     }
 }
