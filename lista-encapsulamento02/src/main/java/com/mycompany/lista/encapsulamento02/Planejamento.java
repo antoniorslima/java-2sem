@@ -12,7 +12,7 @@ public class Planejamento {
     private String atividade;
     private String responsavel;
     private Integer diasEstimados;
-    private Integer diasUsados;
+    private Integer diasUsados = 0;
 
     public Planejamento(String atividade, String responsavel, Integer diasEstimados) {
         this.atividade = atividade;
@@ -38,8 +38,14 @@ public class Planejamento {
             diferencaDias = diasEstimados - diasUsados;
             System.out.println(String.format("Você estimou %d dias, mas a tarefa"
                     + " foi feita em %d dias (%d dias a menos que o estimado)."
-                    + "\nParabéns"
-                    + " Melhore a estimativa", diasEstimados, diasUsados, diferencaDias));
+                    + "\nParabéns", diasEstimados, diasUsados, diferencaDias));
         }
     }
+
+    @Override
+    public String toString() {
+        return "\n\nAtividade: " + atividade + "\nResponsavel: " + responsavel +
+                "\nDias estimados: " + diasEstimados + "\nDias usados: " + diasUsados;
+    }
+    
 }
