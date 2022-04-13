@@ -1,0 +1,3 @@
+2022-04-12 20:32:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "JOGO" already exists; SQL statement:
+create table jogo(id int null primary key auto_increment,nome varchar(200),genero varchar(200)); [42101-199]
