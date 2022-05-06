@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.bandtec.projeto.lista.desafio.ListaUtilTest
+-------------------------------------------------------------------------------
+Tests run: 20, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.031 sec <<< FAILURE!
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaPossuiDuplicidadeDeveRetornarTrue()  Time elapsed: 0.019 sec  <<< FAILURE!
+java.lang.IndexOutOfBoundsException: Index 7 out of bounds for length 7
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+	at java.base/java.util.Objects.checkIndex(Objects.java:372)
+	at java.base/java.util.ArrayList.get(ArrayList.java:459)
+	at com.bandtec.projeto.lista.desafio.ListaUtil.hasDuplicidade(ListaUtil.java:90)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaPossuiDuplicidadeDeveRetornarTrue(ListaUtilTest.java:208)
+
+com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaNaoPossuiDuplicidadeDeveRetornarFalse()  Time elapsed: 0.003 sec  <<< FAILURE!
+java.lang.IndexOutOfBoundsException: Index 6 out of bounds for length 6
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:248)
+	at java.base/java.util.Objects.checkIndex(Objects.java:372)
+	at java.base/java.util.ArrayList.get(ArrayList.java:459)
+	at com.bandtec.projeto.lista.desafio.ListaUtil.hasDuplicidade(ListaUtil.java:90)
+	at com.bandtec.projeto.lista.desafio.ListaUtilTest.testHasDuplicidadeQuandoAcionadoEListaNaoPossuiDuplicidadeDeveRetornarFalse(ListaUtilTest.java:223)
+
