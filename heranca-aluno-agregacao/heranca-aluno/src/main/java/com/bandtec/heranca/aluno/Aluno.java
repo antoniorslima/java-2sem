@@ -35,9 +35,7 @@ public abstract class Aluno {
         this.nome = nome;
     }
     
-    public Double calcularMedia(){
-        return 10.0 + 10.0;
-    }
+    public abstract Double calcularMedia();
     
     @Override
     public String toString() {
